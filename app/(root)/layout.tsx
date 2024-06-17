@@ -12,50 +12,15 @@ export default async function RootLayout({
   //   const loggedIn = await getLoggedInUser();
 
   //   if (!loggedIn) redirect("/sign-in");
-
+  const loggedIn = { firstName: "Gokul", lastName: "VA" };
   return (
     <main className="flex h-screen w-full font-inter">
-      <Sidebar
-        user={{
-          $id: "",
-          email: "",
-          userId: "",
-          dwollaCustomerUrl: "",
-          dwollaCustomerId: "",
-          firstName: "",
-          lastName: "",
-          name: "",
-          address1: "",
-          city: "",
-          state: "",
-          postalCode: "",
-          dateOfBirth: "",
-          ssn: "",
-        }}
-      />
-      Sidebar
+      <Sidebar user={loggedIn} />
       <div className="flex size-full flex-col">
         <div className="root-layout">
           <Image src="/icons/logo.svg" width={30} height={30} alt="logo" />
           <div>
-            <MobileNav
-              user={{
-                $id: "",
-                email: "",
-                userId: "",
-                dwollaCustomerUrl: "",
-                dwollaCustomerId: "",
-                firstName: "",
-                lastName: "",
-                name: "",
-                address1: "",
-                city: "",
-                state: "",
-                postalCode: "",
-                dateOfBirth: "",
-                ssn: "",
-              }}
-            />
+            <MobileNav user={loggedIn} />
             Mobile
           </div>
         </div>
